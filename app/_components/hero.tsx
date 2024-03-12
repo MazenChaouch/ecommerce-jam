@@ -2,7 +2,6 @@ import Image from "next/image";
 import msi from "../../assets/msi.png";
 import star from "../../assets/star.svg";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 export const Hero = () => {
   return (
     <div className="flex w-full bg-stone-200 shadow-inner">
