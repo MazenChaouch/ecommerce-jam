@@ -25,7 +25,7 @@ export const NewArrivalsPage = () => {
 };
 export const ListProducts = () => {
   return (
-    <div className="flex flex-grow justify-between">
+    <div className="flex flex-wrap justify-around gap-10 self-center p-4">
       {Products.map(
         (product: { name: string; price: number; image: any }, index) => (
           <CardProduct
