@@ -2,9 +2,9 @@ import samsung from "@/assets/brands/samsung.svg";
 import apple from "@/assets/brands/apple.svg";
 import gucci from "@/assets/brands/gucci.svg";
 import porsche from "@/assets/brands/porsche.svg";
-import calvinKlein from "@/assets/brands/calvinKlein.svg";
+import calvinKlein from "@/assets/brands/calvin-klein.svg";
 import Image from "next/image";
-export const Brands = () => {
+export const BrandsPage = () => {
   return (
     <div className=" bg-black">
       <div className="container flex h-32 w-full items-center justify-between">

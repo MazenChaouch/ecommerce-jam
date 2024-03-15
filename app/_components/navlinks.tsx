@@ -1,8 +1,6 @@
 "use client";
-
 import * as React from "react";
 import Link from "next/link";
-
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -13,34 +11,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Shop, Navlinks } from "@/app/content";
 
-const shop: { title: string; href: string; description: string }[] = [
-  {
-    title: "Clothes",
-    href: "/clothes",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Cars",
-    href: "/cars",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Gaming Space",
-    href: "/gaming-space",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Decor",
-    href: "/decor",
-    description: "Visually or semantically separates content.",
-  },
-];
-
-export const Navlinks = () => {
+export const Navlink = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -50,45 +23,38 @@ export const Navlinks = () => {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {shop.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
+              {Shop.map(
+                (
+                  component: {
+                    title: string;
+                    href: string;
+                    description: string;
+                  },
+                  index,
+                ) => (
+                  <ListItem
+                    key={index}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                ),
+              )}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="#" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={`text-base ${navigationMenuTriggerStyle()}`}
-            >
-              New arrivals
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="#" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={`text-base ${navigationMenuTriggerStyle()}`}
-            >
-              Contact
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="#" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={`text-base ${navigationMenuTriggerStyle()}`}
-            >
-              About us
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        {Navlinks.map((component, index) => (
+          <NavigationMenuItem key={index}>
+            <Link href={component.link} legacyBehavior passHref>
+              <NavigationMenuLink
+                className={`text-base ${navigationMenuTriggerStyle()}`}
+              >
+                {component.name}
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );

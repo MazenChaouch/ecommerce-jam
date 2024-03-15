@@ -5,18 +5,18 @@ import logo from "../../assets/jam_black.svg";
 import search from "../../assets/search.svg";
 import account from "../../assets/account.svg";
 import cart from "../../assets/cart.svg";
-import { Navlinks } from "./navlinks";
+import { Navlink } from "./navlinks";
 export const Navbar = () => {
   return (
     <>
-      <div className="font-Satoshi z-10 w-full bg-transparent py-5 shadow-2xl ">
+      <div className="z-10 w-full bg-transparent py-5 font-Satoshi shadow-2xl ">
         <div className="container flex items-center justify-between gap-10 py-2 ">
           <Image
             src={logo}
             alt="logo"
             className="h-[18px] w-[147.75px] md:h-[24px] md:w-[197px]"
           />
-          <Navlinks />
+          <Navlink />
           <div className="flex flex-grow items-center space-x-4 rounded-full bg-stone-100 px-4 py-3">
             <Image src={search} alt="search" />
             <input

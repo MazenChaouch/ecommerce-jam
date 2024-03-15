@@ -1,14 +1,16 @@
-import { Brands } from "./_components/brands";
-import { Hero } from "./_components/hero";
+import { BrandsPage } from "./_components/brands";
+import { HeroPage } from "./_components/hero";
 import { Navbar } from "./_components/navbar";
+import { NewArrivalsPage } from "./_components/newArrivals";
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <main className="h-fit w-full">
-        <Hero />
-        <Brands />
+        <HeroPage />
+        <BrandsPage />
+        <NewArrivalsPage />
       </main>
     </>
   );
