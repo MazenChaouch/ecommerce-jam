@@ -1,7 +1,9 @@
 import { BrandsPage } from "./_components/brands";
+import { CategoriesPage } from "./_components/categories";
 import { HeroPage } from "./_components/hero";
 import { Navbar } from "./_components/navbar";
 import { NewArrivalsPage } from "./_components/newArrivals";
+import { TopSellingPage } from "./_components/topSelling";
 
 const Home = () => {
   return (
@@ -11,6 +13,9 @@ const Home = () => {
         <HeroPage />
         <BrandsPage />
         <NewArrivalsPage />
+        <div className="container mx-auto h-[1px] rounded-full bg-stone-500/50" />
+        <TopSellingPage />
+        <CategoriesPage />
       </main>
     </>
   );

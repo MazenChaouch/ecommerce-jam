@@ -8,7 +8,7 @@ export const CardProduct = (product: {
 }) => {
   return (
     <div className="h-fit w-fit space-y-2">
-      <div className="overflow-hidden rounded-xl bg-stone-300 p-4">
+      <div className="overflow-hidden rounded-xl bg-stone-200 p-4">
         <div className="flex">
           <Image
             src={product.image}

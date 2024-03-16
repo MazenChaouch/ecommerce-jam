@@ -8,7 +8,14 @@ import samsung from "@/assets/brands/samsung.svg";
 import porsche from "@/assets/brands/porsche.svg";
 import gucci from "@/assets/brands/gucci.svg";
 import calvinKlein from "@/assets/brands/calvin-klein.svg";
-
+import phones from "@/assets/phones.png";
+import r9 from "@/assets/r9.png";
+import short from "@/assets/short.png";
+import mixer from "@/assets/mixer.png";
+import clothes from "@/assets/clothes.png";
+import cars from "@/assets/cars.png";
+import gaming from "@/assets/gaming.png";
+import decor from "@/assets/decor.png";
 const Hero = {
   title: "NEW Collection 2025 of msi !",
   description:
@@ -54,7 +61,7 @@ const Brands: { name: string; image: any }[] = [
   },
 ];
 
-const Products: { name: string; price: number; image: any }[] = [
+const NewProducts: { name: string; price: number; image: any }[] = [
   {
     name: "Selicon IPHONE SE",
     price: 20,
@@ -74,6 +81,28 @@ const Products: { name: string; price: number; image: any }[] = [
     name: "MSI 2025 NTX-4080",
     price: 8499,
     image: pc,
+  },
+];
+const TopProducts: { name: string; price: number; image: any }[] = [
+  {
+    name: "IPHONE 15 PRO MAX",
+    price: 3999,
+    image: phones,
+  },
+  {
+    name: "R9 2025",
+    price: 4999,
+    image: r9,
+  },
+  {
+    name: "Short Outfitters",
+    price: 199,
+    image: short,
+  },
+  {
+    name: "Mixer 2025",
+    price: 499,
+    image: mixer,
   },
 ];
 const Shop: { title: string; href: string; description: string }[] = [
@@ -115,5 +144,26 @@ const Navlinks: { name: string; link: string }[] = [
     link: "/about",
   },
 ];
-
-export { Hero, Brands, Products, Shop, Navlinks };
+const Categories: { name: string; link: string; image: any }[] = [
+  {
+    name: "Clothes",
+    link: "/clothes",
+    image: clothes,
+  },
+  {
+    name: "Cars",
+    link: "/cars",
+    image: cars,
+  },
+  {
+    name: "Gaming Space",
+    link: "/gaming-space",
+    image: gaming,
+  },
+  {
+    name: "Decor",
+    link: "/decor",
+    image: decor,
+  },
+];
+export { Hero, Brands, NewProducts, TopProducts, Shop, Navlinks, Categories };

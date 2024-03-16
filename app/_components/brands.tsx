@@ -7,12 +7,22 @@ import Image from "next/image";
 export const BrandsPage = () => {
   return (
     <div className=" bg-black">
-      <div className="container flex h-32 w-full items-center justify-between">
-        <Image src={samsung} alt="samsung" />
-        <Image src={apple} alt="apple" />
-        <Image src={gucci} alt="gucci" />
-        <Image src={porsche} alt="porsche" />
-        <Image src={calvinKlein} alt="calvinKlein" />
+      <div className="container flex h-fit w-full flex-wrap items-center justify-around py-4">
+        <div className="flex flex-grow">
+          <Image src={samsung} alt="samsung" />
+        </div>
+        <div className="flex flex-grow">
+          <Image src={apple} alt="apple" />
+        </div>
+        <div className="flex flex-grow">
+          <Image src={gucci} alt="gucci" />
+        </div>
+        <div className="flex flex-grow">
+          <Image src={porsche} alt="porsche" />
+        </div>
+        <div className="flex flex-grow">
+          <Image src={calvinKlein} alt="calvinKlein" />
+        </div>
       </div>
     </div>
   );
