@@ -13,7 +13,7 @@ const Home = () => {
         <HeroPage />
         <BrandsPage />
         <NewArrivalsPage />
-        <div className="container mx-auto h-[1px] rounded-full bg-stone-500/50" />
+        <div className="container mx-auto h-[1px] rounded-full bg-stone-300/50" />
         <TopSellingPage />
         <CategoriesPage />
       </main>
