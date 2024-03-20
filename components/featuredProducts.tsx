@@ -15,7 +15,7 @@ export const FeaturedProducts = ({
   link,
 }: FeturedProductsProps) => {
   return (
-    <div className="flex h-fit w-full">
+    <div className="flex h-fit  w-full p-8">
       <div className="container space-y-12 px-0 py-24 ">
         <div className="text-center font-Integral text-3xl font-bold md:text-5xl">
           {title}

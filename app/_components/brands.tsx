@@ -6,7 +6,7 @@ import calvinKlein from "@/assets/brands/calvin-klein.svg";
 import Image from "next/image";
 export const BrandsPage = () => {
   return (
-    <div className=" bg-black">
+    <div className=" h-fit w-full bg-black p-8">
       <div className="container flex h-fit w-full flex-wrap items-center justify-around py-4">
         <div className="flex flex-grow justify-center">
           <Image src={samsung} alt="samsung" />

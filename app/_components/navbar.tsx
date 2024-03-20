@@ -26,22 +26,20 @@ export const Navbar = () => {
         className={`z-10 w-full bg-white py-5 font-Satoshi shadow ${flow}`}
         ref={nav}
       >
-        <div
-          className={`container flex items-center justify-between gap-10 py-2`}
-        >
+        <div className="container flex items-center justify-between gap-10 py-2">
           <Image
             src={logo}
             alt="logo"
-            className="h-[18px] w-[147px] md:h-[24px] md:w-[197px]"
+            className="h-[18px] w-[147px] lg:h-[24px] lg:w-[197px]"
           />
           <Button variant={"link"} className="m-0 h-fit w-fit p-0">
-            <Image src={menu} alt="menu" className="h- w-8 md:hidden" />
+            <Image src={menu} alt="menu" className="h- w-8 lg:hidden" />
           </Button>
 
-          <div className="max-md:hidden">
+          <div className="max-lg:hidden">
             <Navlink />
           </div>
-          <div className="flex flex-grow items-center space-x-4 rounded-full bg-stone-100 px-4 py-2 max-md:hidden md:py-3">
+          <div className="flex flex-grow items-center space-x-4 rounded-full bg-stone-100 px-4 py-2 max-lg:hidden lg:py-3">
             <Image src={search} alt="search" />
             <input
               type="text"
@@ -49,7 +47,7 @@ export const Navbar = () => {
               className="w-full bg-transparent placeholder:text-sm focus:outline-none"
             />
           </div>
-          <div className="flex items-center space-x-4 max-md:hidden">
+          <div className="flex items-center space-x-4 max-lg:hidden">
             <button>
               <Image src={cart} alt="cart" className="min-h-6 min-w-6" />
             </button>
@@ -64,7 +62,7 @@ export const Navbar = () => {
 };
 export const NavbarMobile = () => {
   return (
-    <div className="container max-md:hidden">
+    <div className="container max-lg:hidden">
       <Navlink />
     </div>
   );

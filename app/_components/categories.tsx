@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export const CategoriesPage = () => {
   return (
-    <div className="h-fit">
+    <div className="h-fit w-full p-8">
       <div className="container space-y-16 rounded-[40px] bg-stone-200 p-16">
         <div className="mt-10 text-center font-Integral text-2xl font-bold uppercase md:text-5xl">
           Browse By Categories
