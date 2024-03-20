@@ -6,7 +6,7 @@ import Link from "next/link";
 export const HeroPage = () => {
   return (
     <div className="flex w-full  bg-stone-200 shadow-inner">
-      <div className="container flex items-center justify-between gap-10 py-20 max-md:flex-wrap">
+      <div className="container flex items-center justify-between gap-10 py-20 max-md:flex-wrap-reverse">
         <div className="flex flex-col space-y-5 md:w-1/2">
           <h1 className="mb-5 text-clip font-Integral text-4xl font-bold md:text-7xl ">
             {Hero.title}
