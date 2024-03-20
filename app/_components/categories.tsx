@@ -6,7 +6,7 @@ export const CategoriesPage = () => {
   return (
     <div className="h-fit">
       <div className="container space-y-16 rounded-[40px] bg-stone-200 p-16">
-        <div className="mt-10 text-center font-Integral text-5xl font-bold uppercase">
+        <div className="mt-10 text-center font-Integral text-2xl font-bold uppercase md:text-5xl">
           Browse By Categories
         </div>
         <div className="flex gap-10">

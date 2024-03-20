@@ -5,16 +5,16 @@ import { Hero } from "../content";
 import Link from "next/link";
 export const HeroPage = () => {
   return (
-    <div className="flex w-full bg-stone-200 shadow-inner">
+    <div className="flex w-full  bg-stone-200 shadow-inner">
       <div className="container flex items-center justify-between gap-10 py-20 max-md:flex-wrap">
         <div className="flex flex-col space-y-5 md:w-1/2">
-          <h1 className="mb-5 text-balance font-Integral text-5xl font-bold md:text-7xl">
+          <h1 className="mb-5 text-clip font-Integral text-4xl font-bold md:text-7xl ">
             {Hero.title}
           </h1>
           <p className="font-Satoshi md:text-xl">{Hero.description}</p>
 
           <Button
-            className="rounded-full px-14 py-5 font-Satoshi text-lg md:px-20 md:py-7"
+            className="rounded-full px-14 py-5 font-Satoshi text-lg md:w-fit md:px-20 md:py-7"
             asChild
           >
             <Link href={Hero.link}>Shop Now</Link>

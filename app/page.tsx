@@ -9,8 +9,8 @@ import { TopSellingPage } from "./_components/topSelling";
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <main className="">
+      <main className="h-full w-full">
+        <Navbar />
         <HeroPage />
         <BrandsPage />
         <NewArrivalsPage />
