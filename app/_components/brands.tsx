@@ -8,20 +8,20 @@ import Marquee from "react-fast-marquee";
 
 export const BrandsPage = () => {
   return (
-    <Marquee className="bg-black p-8" autoFill={true} speed={30}>
-      <div className="px-14">
+    <Marquee className="bg-black p-4 md:p-8" autoFill={true} speed={30}>
+      <div className="h-fit px-8 md:px-14">
         <Image src={samsung} alt="samsung" />
       </div>
-      <div className="px-14">
+      <div className="h-fit px-8 md:px-14">
         <Image src={apple} alt="apple" />
       </div>
-      <div className="px-14">
+      <div className="h-fit px-8 md:px-14">
         <Image src={gucci} alt="gucci" />
       </div>
-      <div className="px-14">
+      <div className="h-fit px-8 md:px-14">
         <Image src={porsche} alt="porsche" />
       </div>
-      <div className="px-14">
+      <div className="h-fit px-8 md:px-14">
         <Image src={calvinKlein} alt="calvinKlein" />
       </div>
     </Marquee>
