@@ -1,52 +1,45 @@
 "use client";
 import Image from "next/image";
 import rateIcon from "../assets/rating.svg";
-import { useEffect, useState } from "react";
 
 interface RatingProps {
   rating: number;
+  titled?: boolean;
 }
 
-export const Rating = ({ rating }: RatingProps) => {
-  const [starWidth, setStarWidth] = useState(24);
-  const [starParts, setStarParts] = useState<{ full: number; partial: number }>(
-    { full: 0, partial: 0 },
+export const Rating = ({ rating, titled }: RatingProps) => {
+  const rate = Math.floor(rating);
+  const partial = rating - rate;
+  return (
+    <div className="flex items-center">
+      <div className="flex h-fit ">
+        {[...Array(rate)].map((_, index) => (
+          <Image
+            key={index}
+            src={rateIcon}
+            alt="rating"
+            className="mr-0.5 h-4 w-4 md:h-6 md:w-6"
+          />
+        ))}
+        {partial > 0 && (
+          <Image
+            src={rateIcon}
+            alt="rating"
+            className="mr-0.5 h-4 w-4 md:h-6 md:w-6"
+            style={{
+              clipPath: `inset(0 ${20 - partial * 20}px 0 0)`,
+            }}
+          />
+        )}
+      </div>
+      <div className="flex">
+        {titled && (
+          <>
+            <span className="lg:text-lg">{rating}</span>
+            <span className="text-stone-500 lg:text-lg">/5</span>
+          </>
+        )}
+      </div>
+    </div>
   );
-
-  useEffect(() => {
-    const fullStars = Math.floor(rating);
-    const decimalPart = rating - fullStars;
-
-    setStarParts({ full: fullStars, partial: decimalPart });
-  }, [rating]);
-
-  const starElements = [];
-  for (let i = 0; i < starParts.full; i++) {
-    starElements.push(
-      <div key={i} className={`w-${starWidth} h-${starWidth}`}>
-        <Image
-          src={rateIcon}
-          alt="rating"
-          className="h-full w-full object-cover"
-        />
-      </div>,
-    );
-  }
-
-  if (starParts.partial > 0) {
-    starElements.push(
-      <div
-        key={5}
-        className={`w-[${starWidth * starParts.partial}px] h-${starWidth} overflow-hidden`}
-      >
-        <Image
-          src={rateIcon}
-          alt="rating"
-          className="h-full w-full object-cover"
-        />
-      </div>,
-    );
-  }
-
-  return <div className="flex h-fit overflow-hidden">{starElements}</div>;
 };

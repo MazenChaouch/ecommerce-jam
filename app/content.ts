@@ -95,25 +95,41 @@ const NewProducts: { name: string; price: number; image: any }[] = [
     image: pc,
   },
 ];
-const TopProducts: { name: string; price: number; image: any }[] = [
+const TopProducts: {
+  name: string;
+  oldPrice?: number;
+  price: number;
+  rating?: number;
+  discount?: number;
+  image: any;
+}[] = [
   {
     name: "IPHONE 15 PRO MAX",
+    oldPrice: 5000,
     price: 3999,
+    rating: 4.5,
+    discount: 20,
     image: phones,
   },
   {
     name: "R9 2025",
+    oldPrice: 5999,
     price: 4999,
+    rating: 4.5,
     image: r9,
   },
   {
     name: "Short Outfitters",
+    oldPrice: 299,
     price: 199,
+    rating: 4,
     image: short,
   },
   {
     name: "Mixer 2025",
+    oldPrice: 599,
     price: 499,
+    rating: 4.5,
     image: mixer,
   },
 ];

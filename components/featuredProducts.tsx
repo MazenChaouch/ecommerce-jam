@@ -2,7 +2,14 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { CardProduct } from "./cardProduct";
 
-type product = { name: string; price: number; image: any };
+type product = {
+  name: string;
+  oldPrice?: number;
+  price: number;
+  rating?: number;
+  discount?: number;
+  image: any;
+};
 interface FeturedProductsProps {
   title: string;
   products: product[];
@@ -38,11 +45,24 @@ export const ListProducts = ({ Products }: { Products: product[] }) => {
   return (
     <div className="flex flex-wrap justify-around gap-4 p-4">
       {Products.map(
-        (product: { name: string; price: number; image: any }, index) => (
+        (
+          product: {
+            name: string;
+            oldPrice?: number;
+            price: number;
+            rating?: number;
+            discount?: number;
+            image: any;
+          },
+          index,
+        ) => (
           <CardProduct
             key={index}
             name={product.name}
+            oldPrice={product.oldPrice}
             price={product.price}
+            rating={product.rating}
+            discount={product.discount}
             image={product.image}
           />
         ),
