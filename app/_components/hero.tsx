@@ -19,12 +19,12 @@ export const HeroPage = () => {
           >
             <Link href={Hero.link}>Shop Now</Link>
           </Button>
-          <div className="flex h-full max-lg:flex-col lg:items-center lg:space-x-5">
+          <div className="flex h-full items-center space-x-2 lg:space-x-5">
             {Hero.specs.map((spec, index) => (
               <>
                 <div
                   key={index}
-                  className="flex flex-row-reverse items-center justify-around lg:flex-col "
+                  className="flex flex-col items-center justify-around text-center"
                 >
                   <p className="w-full font-Satoshi text-lg font-bold lg:text-4xl">
                     {spec.name}
@@ -32,11 +32,10 @@ export const HeroPage = () => {
 
                   <div className="flex w-full items-center justify-between font-Satoshi lg:text-lg ">
                     <p>{spec.description}</p>
-                    <div className="my-2 mr-4 flex w-[2px] flex-col rounded-full bg-stone-500/30 py-4 lg:hidden" />
                   </div>
                 </div>
                 {index !== Hero.specs.length - 1 && (
-                  <div className="flex w-[2px] flex-col rounded-full bg-stone-500/30 py-6 max-lg:hidden" />
+                  <div className="flex w-[2px] flex-col rounded-full bg-stone-500/30 py-6" />
                 )}
               </>
             ))}

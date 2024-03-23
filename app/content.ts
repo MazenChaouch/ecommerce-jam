@@ -16,6 +16,17 @@ import clothes from "@/assets/clothes.png";
 import cars from "@/assets/cars.png";
 import gaming from "@/assets/gaming.png";
 import decor from "@/assets/decor.png";
+import mail from "@/assets/mail.svg";
+import facebook from "@/assets/socials/facebook.svg";
+import twitter from "@/assets/socials/twitter.svg";
+import instagram from "@/assets/socials/instagram.svg";
+import github from "@/assets/socials/github.svg";
+import logo from "@/assets/jam_black.svg";
+import visa from "@/assets/payment/visa.svg";
+import mastercard from "@/assets/payment/mastercard.svg";
+import paypal from "@/assets/payment/paypal.svg";
+import googlepay from "@/assets/payment/google-pay.svg";
+import applepay from "@/assets/payment/apple-pay.svg";
 
 const Hero = {
   title: "NEW Collection 2025 of msi !",
@@ -167,68 +178,205 @@ const Categories: { name: string; link: string; image: any }[] = [
     image: decor,
   },
 ];
-const Testimonials: { rating: number; name: string; description: string }[] = [
+const Testimonial: { rating: number; name: string; comment: string }[] = [
   {
-    rating: 5,
+    rating: 2,
     name: "John D.",
-    description:
+    comment:
       "I've been a loyal customer of Shop.co for years, and I can't recommend them enough. The quality of their products, combined with their exceptional customer service, makes them stand out from the competition.",
   },
   {
-    rating: 5,
+    rating: 4,
     name: "Sahar M.",
-    description:
+    comment:
       "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
   },
   {
-    rating: 5,
+    rating: 3.5,
     name: "Alex K.",
-    description:
+    comment:
       "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
   },
   {
     rating: 5,
     name: "James L.",
-    description:
+    comment:
       "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
   },
   {
     rating: 5,
     name: "Sara B.",
-    description:
+    comment:
       "I've been shopping at Shop.co for years, and I've never been disappointed. The quality of their products is unmatched, and their customer service is top-notch. I highly recommend them to anyone looking for stylish and affordable clothing.",
   },
   {
     rating: 5,
     name: "Mike S.",
-    description:
+    comment:
       "Shop.co has become my go-to destination for all things fashion. Their selection of clothes is extensive, and the quality is exceptional. I love that I can find everything I need in one place, from casual wear to formal attire.",
   },
   {
     rating: 5,
     name: "Emily P.",
-    description:
+    comment:
       "I've always been a fan of Shop.co, and their latest collection has only solidified my loyalty. The clothes are trendy, comfortable, and affordable, making them a must-have for any fashion enthusiast.",
   },
   {
     rating: 5,
     name: "David H.",
-    description:
+    comment:
       "Shop.co has quickly become my favorite online store for clothes. Their selection is vast, their prices are competitive, and their customer service is exceptional. I highly recommend them to anyone looking for quality fashion at affordable prices.",
   },
   {
     rating: 5,
     name: "Linda M.",
-    description:
+    comment:
       "I can't say enough good things about Shop.co. Their clothes are stylish, comfortable, and affordable, and their customer service is second to none. I've recommended them to all my friends and family, and they've all become loyal customers too.",
   },
   {
     rating: 5,
     name: "Tom R.",
-    description:
+    comment:
       "Shop.co is my go-to destination for all things fashion. Their selection of clothes is unmatched, their prices are competitive, and their customer service is exceptional. I've never been disappointed with a purchase from them, and I highly recommend them to anyone looking for quality clothes at affordable prices.",
   },
 ];
+const FooterContent = {
+  brand: {
+    name: "Jam Store",
+    description: "Jam Store: Where Everything's Modern, and Anything's Yours",
+    image: logo,
+    mail: mail,
+  },
+  socials: [
+    {
+      name: "twitter",
+      image: twitter,
+    },
+    {
+      name: "facebook",
+      image: facebook,
+    },
+    {
+      name: "instagram",
+      image: instagram,
+    },
+    {
+      name: "github",
+      image: github,
+    },
+  ],
+  sections: [
+    {
+      title: "Company",
+      links: [
+        {
+          name: "About",
+          link: "/about",
+        },
+        {
+          name: "Features",
+          link: "/features",
+        },
+        {
+          name: "Works",
+          link: "/works",
+        },
+        {
+          name: "Career",
+          link: "/career",
+        },
+      ],
+    },
+    {
+      title: "Help",
+      links: [
+        {
+          name: "Customer Support",
+          link: "/customer-support",
+        },
+        {
+          name: "Delivery Details",
+          link: "/delivery-details",
+        },
+        {
+          name: "Teams & Conditions",
+          link: "/terms-conditions",
+        },
+        {
+          name: "Privacy Policy",
+          link: "/privacy-policy",
+        },
+      ],
+    },
+    {
+      title: "Faq",
+      links: [
+        {
+          name: "Account",
+          link: "/account",
+        },
+        {
+          name: "Manage Deliveries",
+          link: "/manage-deliveries",
+        },
+        {
+          name: "Orders",
+          link: "/orders",
+        },
+        {
+          name: "Payment",
+          link: "/payment",
+        },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        {
+          name: "Free eBooks",
+          link: "/free-ebooks",
+        },
+        {
+          name: "Development Tutorial",
+          link: "/development-tutorial",
+        },
+        {
+          name: "How to - Blog",
+          link: "/how-to-blog",
+        },
+        {
+          name: "Youtube Playlist",
+          link: "/youtube-playlist",
+        },
+      ],
+    },
+  ],
+  copyright: "© 2025 Jam Store. All rights reserved.",
+  payment: {
+    methods: [
+      {
+        name: "visa",
+        image: visa,
+      },
+      {
+        name: "mastercard",
+        image: mastercard,
+      },
+      {
+        name: "paypal",
+        image: paypal,
+      },
+      {
+        name: "googlepay",
+        image: googlepay,
+      },
+      {
+        name: "applepay",
+        image: applepay,
+      },
+    ],
+  },
+};
 export {
   Hero,
   Brands,
@@ -237,5 +385,6 @@ export {
   Shop,
   Navlinks,
   Categories,
-  Testimonials,
+  Testimonial,
+  FooterContent,
 };

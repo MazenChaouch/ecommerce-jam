@@ -15,8 +15,8 @@ export const FeaturedProducts = ({
   link,
 }: FeturedProductsProps) => {
   return (
-    <div className="flex h-fit  w-full p-8">
-      <div className="container space-y-12 px-0 py-24 ">
+    <div className="flex h-fit w-full md:p-8">
+      <div className="container space-y-12 px-0 py-12">
         <div className="text-center font-Integral text-3xl font-bold md:text-5xl">
           {title}
         </div>
@@ -36,7 +36,7 @@ export const FeaturedProducts = ({
 };
 export const ListProducts = ({ Products }: { Products: product[] }) => {
   return (
-    <div className="flex flex-wrap justify-around gap-4 p-4 max-lg:gap-8">
+    <div className="flex flex-wrap justify-around gap-4 p-4">
       {Products.map(
         (product: { name: string; price: number; image: any }, index) => (
           <CardProduct
