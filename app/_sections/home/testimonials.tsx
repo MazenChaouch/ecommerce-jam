@@ -1,6 +1,6 @@
 "use client";
 import { CardTestimonial } from "@/components/cardTestimonial";
-import { Testimonial } from "../content";
+import { Testimonial } from "../../content";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import arrow from "@/assets/arrow.svg";

@@ -8,8 +8,8 @@ export const FooterContents = () => {
   return (
     <div className="h-fit w-full bg-stone-200 p-4 py-12">
       <div className="container space-y-8 p-2">
-        <div className="flex flex-wrap items-center justify-between space-y-4 lg:space-x-4">
-          <div className="flex h-full flex-col space-y-4">
+        <div className="flex flex-wrap items-center justify-between space-x-4 space-y-4 ">
+          <div className="flex h-full w-auto flex-col space-y-4">
             <Image src={FooterContent.brand.image} alt="logo" />
             <p className="text-sm text-stone-500">
               {FooterContent.brand.description}
@@ -22,11 +22,11 @@ export const FooterContents = () => {
               ))}
             </div>
           </div>
-
+          <div className="sm: grid grid-cols-1"></div>
           {FooterContent.sections.map((section) => (
             <div
               key={section.title}
-              className="flex flex-col justify-center space-y-2"
+              className="flex flex-col justify-center space-y-2 "
             >
               <p className="font-Satoshi text-lg font-medium uppercase tracking-wider">
                 {section.title}

@@ -137,25 +137,22 @@ const Shop: { title: string; href: string; description: string }[] = [
   {
     title: "Clothes",
     href: "/clothes",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    description: "Best quality clothes, for all ages.",
   },
   {
     title: "Cars",
     href: "/cars",
-    description:
-      "For sighted users to preview content available behind a link.",
+    description: "spare part and new cars, all in one place.",
   },
   {
     title: "Gaming Space",
     href: "/gaming-space",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    description: "high tech gaming equipment, for all gamers.",
   },
   {
     title: "Decor",
     href: "/decor",
-    description: "Visually or semantically separates content.",
+    description: "modern and classic decor, for all tastes.",
   },
 ];
 const Navlinks: { name: string; link: string }[] = [
@@ -259,7 +256,8 @@ const Testimonial: { rating: number; name: string; comment: string }[] = [
 const FooterContent = {
   brand: {
     name: "Jam Store",
-    description: "Jam Store: Where Everything's Modern, and Anything's Yours",
+    description:
+      "\"Jam Store: Where Everything's Modern,\n and Anything's Yours\"",
     image: logo,
     mail: mail,
   },
@@ -367,7 +365,7 @@ const FooterContent = {
       ],
     },
   ],
-  copyright: "© 2025 Jam Store. All rights reserved.",
+  copyright: `© ${new Date().getFullYear()} Jam Store. All rights reserved.`,
   payment: {
     methods: [
       {

@@ -12,16 +12,16 @@ export const BrandsPage = () => {
       <div className="h-fit px-8 md:px-14">
         <Image src={samsung} alt="samsung" />
       </div>
-      <div className="h-fit px-8 md:px-14">
+      <div className="h-fit px-4 md:px-14">
         <Image src={apple} alt="apple" />
       </div>
-      <div className="h-fit px-8 md:px-14">
+      <div className="h-fit px-4 md:px-14">
         <Image src={gucci} alt="gucci" />
       </div>
-      <div className="h-fit px-8 md:px-14">
+      <div className="h-fit px-4 md:px-14">
         <Image src={porsche} alt="porsche" />
       </div>
-      <div className="h-fit px-8 md:px-14">
+      <div className="h-fit px-4 md:px-14">
         <Image src={calvinKlein} alt="calvinKlein" />
       </div>
     </Marquee>

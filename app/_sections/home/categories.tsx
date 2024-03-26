@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Categories } from "../content";
+import { Categories } from "../../content";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export const CategoriesPage = () => {

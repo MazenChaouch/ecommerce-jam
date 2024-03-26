@@ -1,12 +1,12 @@
 import { Separator } from "@/components/separator";
-import { BrandsPage } from "./_components/brands";
-import { CategoriesPage } from "./_components/categories";
-import { Footer } from "./_components/footer";
-import { HeroPage } from "./_components/hero";
-import { Navbar } from "./_components/navbar";
-import { NewArrivalsPage } from "./_components/newArrivals";
-import { Testimonials } from "./_components/testimonials";
-import { TopSellingPage } from "./_components/topSelling";
+import { BrandsPage } from "./_sections/home/brands";
+import { CategoriesPage } from "./_sections/home/categories";
+import { Footer } from "./_sections/global/footer";
+import { HeroPage } from "./_sections/home/hero";
+import { Navbar } from "./_sections/global/navbar";
+import { NewArrivalsPage } from "./_sections/home/newArrivals";
+import { Testimonials } from "./_sections/home/testimonials";
+import { TopSellingPage } from "./_sections/home/topSelling";
 
 const Home = () => {
   return (
