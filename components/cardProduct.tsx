@@ -12,12 +12,12 @@ export const CardProduct = (product: {
   image: any;
 }) => {
   return (
-    <div className="h-fit w-fit space-y-2 ">
-      <div className="rounded-xl bg-stone-200 p-2 md:p-4">
+    <div className="h-fit w-fit space-y-2">
+      <div className="rounded-xl bg-stone-200 p-2">
         <Image
           src={product.image}
           alt={product.name}
-          className="h-36 w-36 object-contain duration-500 ease-in-out hover:scale-110 max-[350px]:h-40 max-[350px]:w-40 sm:h-56 sm:w-56 lg:h-72 lg:w-72"
+          className="size-fit object-contain duration-500 ease-in-out hover:scale-110 sm:size-72"
         />
       </div>
       <div className="font-Satoshi text-sm font-bold md:text-lg">

@@ -43,7 +43,7 @@ export const FeaturedProducts = ({
 };
 export const ListProducts = ({ Products }: { Products: product[] }) => {
   return (
-    <div className="flex flex-wrap justify-around gap-4 p-4">
+    <div className="flex flex-wrap justify-around gap-8 p-8">
       {Products.map(
         (
           product: {
