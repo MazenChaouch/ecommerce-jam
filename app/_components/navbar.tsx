@@ -36,22 +36,26 @@ export const Navbar = () => {
         className={`top-0 z-20 h-fit w-full bg-white py-5 font-Satoshi shadow ${fix} transition-all duration-300`}
         ref={nav}
       >
-        <div className={`${show ? "h-fit" : "hidden h-0"}`}>
+        <div
+          className={`${show ? "visible opacity-100" : "invisible h-0 opacity-0"} transition-opacity duration-150`}
+        >
           <NavbarMobile />
         </div>
         <div className="container flex items-center justify-between gap-4 lg:gap-10 lg:py-2">
-          <Button variant={"link"} className="m-0 h-fit w-fit p-0">
+          <Button variant={"link"} className="m-0 h-fit w-fit p-0 lg:hidden">
             <Image
               src={menu}
               alt="menu"
-              className="min-h-6 min-w-6 lg:hidden"
+              className="min-h-6 min-w-6 "
               onClick={() => {
                 setShow((prev) => !prev);
               }}
             />
           </Button>
           <div className="flex min-h-6 min-w-24 max-lg:max-w-36">
-            <Image src={logo} alt="logo" />
+            <Link href={"/home"}>
+              <Image src={logo} alt="logo" />
+            </Link>
           </div>
 
           <div className="max-lg:hidden">
@@ -85,7 +89,7 @@ export const Navbar = () => {
     </>
   );
 };
-export const NavbarMobile = () => {
+const NavbarMobile = () => {
   return (
     <div className="flex h-fit w-full flex-col items-center justify-center bg-white pb-5 transition-all duration-300">
       <div className="container mx-auto flex flex-col items-center justify-center ">

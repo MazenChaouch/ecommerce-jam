@@ -32,14 +32,13 @@ export const Rating = ({ rating, titled }: RatingProps) => {
           />
         )}
       </div>
-      <div className="flex">
-        {titled && (
-          <>
-            <span className="lg:text-lg">{rating}</span>
-            <span className="text-stone-500 lg:text-lg">/5</span>
-          </>
-        )}
-      </div>
+
+      {titled && (
+        <div className="mx-2 flex">
+          <span className="text-xs md:text-lg">{rating}</span>
+          <span className="text-xs text-stone-400 md:text-lg">/5</span>
+        </div>
+      )}
     </div>
   );
 };

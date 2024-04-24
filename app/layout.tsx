@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Satoshi, Integral } from "@/assets/fonts/font";
-import { Navbar } from "./_sections/global/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -27,6 +27,14 @@ import mastercard from "@/assets/payment/mastercard.svg";
 import paypal from "@/assets/payment/paypal.svg";
 import googlepay from "@/assets/payment/google-pay.svg";
 import applepay from "@/assets/payment/apple-pay.svg";
+import gradientshirt from "@/assets/gradient-graphic-t-shirt.png";
+import pants from "@/assets/pants.png";
+import polo from "@/assets/polo.png";
+import checkered from "@/assets/checkered.png";
+import straped from "@/assets/straped.png";
+import verticalstriped from "@/assets/verticalstriped.png";
+import courage from "@/assets/courage.png";
+import sleevedshirt from "@/assets/sleevedshirt.png";
 
 const Hero = {
   title: "NEW Collection 2025 of msi !",
@@ -136,22 +144,22 @@ const TopProducts: {
 const Shop: { title: string; href: string; description: string }[] = [
   {
     title: "Clothes",
-    href: "/clothes",
+    href: "/shop/clothes",
     description: "Best quality clothes, for all ages.",
   },
   {
     title: "Cars",
-    href: "/cars",
+    href: "/shop/cars",
     description: "spare part and new cars, all in one place.",
   },
   {
     title: "Gaming Space",
-    href: "/gaming-space",
+    href: "/shop/gaming-space",
     description: "high tech gaming equipment, for all gamers.",
   },
   {
     title: "Decor",
-    href: "/decor",
+    href: "/shop/decor",
     description: "modern and classic decor, for all tastes.",
   },
 ];
@@ -172,22 +180,22 @@ const Navlinks: { name: string; link: string }[] = [
 const Categories: { name: string; link: string; image: any }[] = [
   {
     name: "Clothes",
-    link: "/clothes",
+    link: "/shop/clothes",
     image: clothes,
   },
   {
     name: "Cars",
-    link: "/cars",
+    link: "/shop/cars",
     image: cars,
   },
   {
     name: "Gaming Space",
-    link: "/gaming-space",
+    link: "/shop/gaming-space",
     image: gaming,
   },
   {
     name: "Decor",
-    link: "/decor",
+    link: "/shop/decor",
     image: decor,
   },
 ];
@@ -281,6 +289,27 @@ const FooterContent = {
   ],
   sections: [
     {
+      title: "Resources",
+      links: [
+        {
+          name: "Free eBooks",
+          link: "/free-ebooks",
+        },
+        {
+          name: "Development Tutorial",
+          link: "/development-tutorial",
+        },
+        {
+          name: "How to - Blog",
+          link: "/how-to-blog",
+        },
+        {
+          name: "Youtube Playlist",
+          link: "/youtube-playlist",
+        },
+      ],
+    },
+    {
       title: "Company",
       links: [
         {
@@ -298,27 +327,6 @@ const FooterContent = {
         {
           name: "Career",
           link: "/career",
-        },
-      ],
-    },
-    {
-      title: "Help",
-      links: [
-        {
-          name: "Customer Support",
-          link: "/customer-support",
-        },
-        {
-          name: "Delivery Details",
-          link: "/delivery-details",
-        },
-        {
-          name: "Teams & Conditions",
-          link: "/terms-conditions",
-        },
-        {
-          name: "Privacy Policy",
-          link: "/privacy-policy",
         },
       ],
     },
@@ -344,23 +352,23 @@ const FooterContent = {
       ],
     },
     {
-      title: "Resources",
+      title: "Help",
       links: [
         {
-          name: "Free eBooks",
-          link: "/free-ebooks",
+          name: "Customer Support",
+          link: "/customer-support",
         },
         {
-          name: "Development Tutorial",
-          link: "/development-tutorial",
+          name: "Delivery Details",
+          link: "/delivery-details",
         },
         {
-          name: "How to - Blog",
-          link: "/how-to-blog",
+          name: "Teams & Conditions",
+          link: "/terms-conditions",
         },
         {
-          name: "Youtube Playlist",
-          link: "/youtube-playlist",
+          name: "Privacy Policy",
+          link: "/privacy-policy",
         },
       ],
     },
@@ -391,11 +399,118 @@ const FooterContent = {
     ],
   },
 };
+const Products: {
+  name: string;
+  oldPrice?: number;
+  price: number;
+  rating?: number;
+  image: any;
+  category: string;
+  size: string[];
+  color: string;
+  slug: string;
+}[] = [
+  {
+    name: "Gradient Graphic T-shirt",
+    price: 145,
+    rating: 3.5,
+    image: gradientshirt,
+    category: "t-shirt",
+    size: ["S", "M", "L", "XL", "XXL"],
+    color: "#FFFFFF",
+    slug: "gradient-graphic-t-shirt",
+  },
+  // New Products
+  {
+    name: "Relaxed Fit Linen Pants",
+    price: 79.99,
+    image: pants,
+    category: "pants",
+    size: ["XS", "S", "M", "L", "XL"],
+    color: "#C0BAA3",
+    slug: "relaxed-fit-linen-pants",
+  },
+  {
+    name: "High-Waisted Denim Shorts",
+    oldPrice: 49.99,
+    price: 39.99,
+    image: polo,
+    category: "shorts",
+    size: ["24", "26", "28", "30", "32"],
+    color: "#0000FF",
+    slug: "high-waisted-denim-shorts",
+  },
+  {
+    name: "Lightweight Puffer Jacket",
+    price: 129.99,
+    image: checkered,
+    category: "jacket",
+    size: ["XS", "S", "M", "L", "XL"],
+    color: "#000000",
+    slug: "lightweight-puffer-jacket",
+  },
+  {
+    name: "Flowy Floral Midi Dress",
+    price: 99.5,
+    image: straped,
+    category: "dress",
+    size: ["S", "M", "L", "XL"],
+    color: "#F0FFF0",
+    slug: "flowy-floral-midi-dress",
+  },
+  {
+    name: "Cable-Knit Cashmere Sweater",
+    price: 249.0,
+    image: verticalstriped,
+    category: "sweater",
+    size: ["XS", "S", "M", "L", "XL"],
+    color: "#F5F5DC",
+    slug: "cable-knit-cashmere-sweater",
+  },
+  {
+    name: "Classic White Tank Top",
+    price: 19.99,
+    image: courage,
+    category: "tank",
+    size: ["XS", "S", "M", "L", "XL"],
+    color: "#FFFFFF",
+    slug: "classic-white-tank-top",
+  },
+  {
+    name: "Tech Fleece Joggers",
+    price: 64.99,
+    image: checkered,
+    category: "joggers",
+    size: ["S", "M", "L", "XL", "XXL"],
+    color: "#808080",
+    slug: "tech-fleece-joggers",
+  },
+  {
+    name: "Recycled Polyester Activewear Set",
+    price: 89.99,
+    image: sleevedshirt,
+    category: "activewear",
+    size: ["XS", "S", "M", "L", "XL"],
+    color: "#0000FF",
+    slug: "recycled-polyester-activewear-set",
+  },
+  {
+    name: "Baseball Cap with Embroidered Logo",
+    price: 24.99,
+    image: pants,
+    category: "hat",
+    size: ["one size"],
+    color: "#000080",
+    slug: "baseball-cap-with-embroidered-logo",
+  },
+];
+
 export {
   Hero,
   Brands,
   NewProducts,
   TopProducts,
+  Products,
   Shop,
   Navlinks,
   Categories,

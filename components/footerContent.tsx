@@ -11,7 +11,7 @@ export const FooterContents = () => {
         <div className="flex flex-wrap items-center justify-between space-x-4 space-y-4 ">
           <div className="flex h-full w-auto flex-col space-y-4">
             <Image src={FooterContent.brand.image} alt="logo" />
-            <p className="text-sm text-stone-500">
+            <p className="w-64 text-sm text-stone-500">
               {FooterContent.brand.description}
             </p>
             <div className="flex space-x-2">
